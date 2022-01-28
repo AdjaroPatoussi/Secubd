@@ -1,0 +1,50 @@
+﻿@model Secubd.Models.Module
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Module</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Niveau.libelleNiv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Niveau.libelleNiv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomMod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomMod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.credit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.est_requis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.est_requis)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codeMod }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,56 @@
+﻿@model Secubd.Models.Module
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Module</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Niveau.libelleNiv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Niveau.libelleNiv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomMod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomMod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.credit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.credit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.est_requis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.est_requis)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

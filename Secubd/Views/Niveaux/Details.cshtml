@@ -1,0 +1,42 @@
+﻿@model Secubd.Models.Niveau
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Niveau</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Parcour.libellePar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parcour.libellePar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.libelleNiv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.libelleNiv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nbreModule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nbreModule)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codeNiv }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

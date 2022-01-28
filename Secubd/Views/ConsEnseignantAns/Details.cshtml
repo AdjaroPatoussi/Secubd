@@ -1,0 +1,74 @@
+﻿@model Secubd.vu.ConsEnseignantAn
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ConsEnseignantAn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomETudiant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomETudiant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codePar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codePar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomMod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomMod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomEnseignant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomEnseignant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.libelleEval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.libelleEval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.logEns)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.logEns)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

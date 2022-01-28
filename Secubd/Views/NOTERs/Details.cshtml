@@ -1,0 +1,66 @@
+﻿@model Secubd.Models.NOTER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NOTER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Etudiant.nomEtud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etudiant.nomEtud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evaluation.libelleEval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evaluation.libelleEval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Module.nomMod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Module.nomMod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valide)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valide)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateEval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateEval)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

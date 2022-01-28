@@ -1,0 +1,56 @@
+﻿@model Secubd.vu.ConsEnseignant
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ConsEnseignant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomETudiant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomETudiant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.codePar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.codePar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomMod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomMod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

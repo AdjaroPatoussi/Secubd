@@ -1,0 +1,60 @@
+﻿@model Secubd.Models.Etudiant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Etudiant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Parcour.libellePar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parcour.libellePar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomEtud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomEtud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prenomEtud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prenomEtud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateNaissance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateNaissance)
+        </dd>
+
+     
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.numeroEtud }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

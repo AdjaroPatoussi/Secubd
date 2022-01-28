@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Secubd.vu.ConsDGCh>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroEtud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomETudiant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codePar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomMod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateEval)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.note)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codeMod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codeEval)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroEtud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomETudiant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codePar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomMod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateEval)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codeMod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codeEval)
+        </td>
+        
+    </tr>
+}
+
+</table>

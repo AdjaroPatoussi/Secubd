@@ -1,0 +1,72 @@
+﻿@model Secubd.Models.NOTER
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NOTER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Etudiant.nomEtud)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etudiant.nomEtud)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evaluation.libelleEval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evaluation.libelleEval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Module.nomMod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Module.nomMod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.valide)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.valide)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateEval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateEval)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

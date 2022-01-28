@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Secubd.Models.Inscrire>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Annee_Academique.libelleAnn_Ac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Classe.codeNiv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Niveau.libelleNiv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Etudiant.numeroEtud)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Annee_Academique.libelleAnn_Ac)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Classe.codeNiv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Niveau.libelleNiv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Etudiant.numeroEtud)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { etu= item.Etudiant.numeroEtud,classe= item.Classe.codeNiv,anne= item.Annee_Academique.libelleAnn_Ac ,niv= item.Classe.codeNiv }) |
+        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,50 @@
+﻿@model Secubd.Models.DISPENSER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DISPENSER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Annee_Academique.libelleAnn_Ac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Annee_Academique.libelleAnn_Ac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Classe.codeNiv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Classe.codeNiv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Enseignant.nomEns)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Enseignant.nomEns)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Module.nomMod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Module.nomMod)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
